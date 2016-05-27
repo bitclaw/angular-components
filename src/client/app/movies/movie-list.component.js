@@ -4,7 +4,10 @@
   angular
     .module('app.movies')
     .component('movieList', {
-      template: "Hello from a component"
+      templateUrl: 'app/movies/movie-list.component.html',
+      controller: function () {
+        this.message = 'Hello from a component controller';
+      }
     });
 
 }());
