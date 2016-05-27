@@ -14,6 +14,19 @@
           <td>{{m.title}}</td>
           <td>{{m.rating}}</td>
           <td>{{m.length}}</td>
+          <td>
+            <div class="btn-group">
+
+              <button class="btn btn-default" ng-click="vm.upRating(m)">
+                <span class="glyphicon glyphicon-plus"></span>
+              </button>
+
+              <button class="btn btn-default" ng-click="vm.downRating(m)">
+                <span class="glyphicon glyphicon-minus"></span>
+              </button>
+
+            </div>
+          </td>
         </tr>
         </tbody>
       </table>

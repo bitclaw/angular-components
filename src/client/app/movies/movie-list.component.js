@@ -18,6 +18,19 @@
         vm.movies = movies;
       });
     };
+
+    vm.upRating = function(movie) {
+      if(movie.rating < 5) {
+        movie.rating += 1;
+      }
+    };
+
+    vm.downRating = function(movie) {
+      if(movie.rating > 1) {
+        movie.rating -= 1;
+      }
+    }
+
   }
 
   function getMovies(dataservice) {
