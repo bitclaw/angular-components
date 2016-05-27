@@ -1,5 +1,6 @@
 module.exports = {
-  people: getPeople()
+  people: getPeople(),
+  getMovies: getMovies()
 };
 
 function getPeople() {
@@ -12,5 +13,14 @@ function getPeople() {
     { id: 6, firstName: 'Landon', lastName: 'Gates', age: 11, location: 'South Carolina' },
     { id: 7, firstName: 'Haley', lastName: 'Guthrie', age: 35, location: 'Wyoming' },
     { id: 8, firstName: 'Aaron', lastName: 'Jinglehiemer', age: 22, location: 'Utah' }
+  ];
+}
+
+function getMovies() {
+  return [
+    { id: 1, title: 'Star Wars', rating: '5', length: 120},
+    { id: 1, title: 'Star Trek', rating: '3', length: 90},
+    { id: 1, title: 'Terminator', rating: '3.5', length: 125},
+    { id: 1, title: 'The Hobbit', rating: '3', length: 480}
   ];
 }

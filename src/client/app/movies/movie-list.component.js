@@ -14,7 +14,6 @@
         vm.changeMessage = function() {
           vm.message = "New message";
         };
-        
       }
     });
 
