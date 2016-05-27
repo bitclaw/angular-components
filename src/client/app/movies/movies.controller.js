@@ -5,7 +5,7 @@
     .module('app.movies')
     .controller('MoviesController', MoviesController);
 
-  AdminController.$inject = ['logger'];
+  MoviesController.$inject = ['logger'];
   /* @ngInject */
   function MoviesController(logger) {
     var vm = this;

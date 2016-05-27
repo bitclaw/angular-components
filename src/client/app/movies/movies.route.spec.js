@@ -12,8 +12,6 @@ describe('movies routes', function() {
       $templateCache.put(view, '');
     });
 
-    bard.verifyNoOutstandingHttpRequests();
-
     it('should map state movies to url /movies ', function() {
       expect($state.href('movies', {})).to.equal('/movies');
     });

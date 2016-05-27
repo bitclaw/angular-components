@@ -22,7 +22,7 @@
           controllerAs: 'vm',
           title: 'movies',
           settings: {
-            nav: 1,
+            nav: 3,
             content: '<i class="fa fa-dashboard"></i> Movies'
           }
         }
