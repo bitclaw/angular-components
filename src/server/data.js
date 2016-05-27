@@ -1,6 +1,6 @@
 module.exports = {
   people: getPeople(),
-  getMovies: getMovies()
+  movies: getMovies()
 };
 
 function getPeople() {

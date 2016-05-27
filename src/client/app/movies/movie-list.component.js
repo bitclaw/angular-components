@@ -6,16 +6,24 @@
     .component('movieList', {
       templateUrl: 'app/movies/movie-list.component.html',
       controllerAs: 'vm',
-      controller: movieList
+      controller: ['$q', 'dataservice', 'logger' , movieList]
     });
 
-  function movieList() {
+  function movieList($q,dataservice,logger) {
     var vm = this;
-    vm.message = 'Hello from a component controller';
+    vm.movies = [];
 
-    vm.changeMessage = function() {
-      vm.message = "New message";
+    vm.$onInit = function() {
+      getMovies(dataservice).then(function(movies){
+        vm.movies = movies;
+      });
     };
+  }
+
+  function getMovies(dataservice) {
+    return dataservice.getMovies().then(function(data) {
+      return data;
+    });
   }
 
 }());

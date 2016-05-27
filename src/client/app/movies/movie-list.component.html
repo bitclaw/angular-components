@@ -1,11 +1,22 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <h3>{{ vm.message }}</h3>
-      <input type="text" ng-model="vm.message">
-      <button ng-click="vm.changeMessage()">
-        Change Message
-      </button>
+      <table class="table table-condensed table-striped">
+        <thead>
+        <tr>
+          <th>Title</th>
+          <th>Rating</th>
+          <th>Length</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="m in vm.movies">
+          <td>{{m.title}}</td>
+          <td>{{m.rating}}</td>
+          <td>{{m.length}}</td>
+        </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </div>
