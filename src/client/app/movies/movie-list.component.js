@@ -7,7 +7,14 @@
       templateUrl: 'app/movies/movie-list.component.html',
       controllerAs: 'vm',
       controller: function () {
-        this.message = 'Hello from a component controller';
+
+        var vm = this;
+        vm.message = 'Hello from a component controller';
+
+        vm.changeMessage = function() {
+          vm.message = "New message";
+        };
+        
       }
     });
 
