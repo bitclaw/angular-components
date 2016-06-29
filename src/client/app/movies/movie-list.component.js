@@ -15,7 +15,7 @@
     vm.movies = [];
 
     vm.$onInit = function() {
-      getMovies(dataservice).then(function(movies) {
+      dataservice.getMovies().then(function(movies) {
         vm.movies = movies;
       });
     };
@@ -32,12 +32,6 @@
       }
     };
 
-  }
-
-  function getMovies(dataservice) {
-    return dataservice.getMovies().then(function(data) {
-      return data;
-    });
   }
 
 }());
