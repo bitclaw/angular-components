@@ -10,7 +10,7 @@
     });
 
   /*jshint validthis:true */
-  function movieList(dataservice) {
+  function movieList($q,dataservice) {
     var vm = this;
     vm.movies = [];
 
