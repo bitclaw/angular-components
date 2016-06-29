@@ -8,6 +8,7 @@
       bindings: {
         value: "<"
       },
+      transclude: true,
       controllerAs: 'vm',
       controller: ['$q', 'dataservice', 'logger' , movieRating]
     });
