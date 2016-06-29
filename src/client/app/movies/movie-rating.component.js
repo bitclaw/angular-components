@@ -3,17 +3,18 @@
 
   angular
     .module('app.movies')
-    .component('MovieRatingComponent', {
+    .component('movieRating', {
       templateUrl: 'app/movies/movie-rating.component.html',
       bindings: {
         value: '<'
       },
       transclude: true,
       controllerAs: 'vm',
-      controller: [MovieRatingComponent]
+      controller: [movieRating]
     });
 
-  function MovieRatingComponent() {
+  /*jshint validthis:true */
+  function movieRating() {
     var vm = this;
 
     vm.$onInit = function() {

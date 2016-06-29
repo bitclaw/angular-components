@@ -1,5 +1,5 @@
 /* jshint -W117, -W030 */
-describe('MoviesController', function() {
+describe('movieList', function() {
   var movieList;
 
   beforeEach(function() {

@@ -3,13 +3,14 @@
 
   angular
     .module('app.movies')
-    .component('MovieListComponent', {
+    .component('movieList', {
       templateUrl: 'app/movies/movie-list.component.html',
       controllerAs: 'vm',
-      controller: ['$q', 'dataservice', 'logger' , MovieListComponent]
+      controller: ['$q', 'dataservice', 'logger' , movieList]
     });
 
-  function MovieListComponent($q,dataservice,logger) {
+  /*jshint validthis:true */
+  function movieList(dataservice) {
     var vm = this;
     vm.movies = [];
 
