@@ -15,6 +15,7 @@ describe('movieList', function() {
   describe('Movie List Component', function() {
     it('should be created successfully', function() {
       expect(movieList).to.be.defined;
+      expect(movieList.$onInit).to.be.defined;
     });
 
     // describe('after activate', function() {
