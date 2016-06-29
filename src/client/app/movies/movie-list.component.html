@@ -5,15 +5,17 @@
         <thead>
         <tr>
           <th>Title</th>
-          <th>Rating</th>
           <th>Length</th>
+          <th>Rating</th>
         </tr>
         </thead>
         <tbody>
         <tr ng-repeat="m in vm.movies">
           <td>{{m.title}}</td>
-          <td>{{m.rating}}</td>
           <td>{{m.length}}</td>
+          <td>
+            <movie-rating value="m.rating"></movie-rating>
+          </td>
           <td>
             <div class="btn-group">
 
