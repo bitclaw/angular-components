@@ -1,19 +1,19 @@
-(function(){
-  "use strict";
+(function() {
+  'use strict';
 
   angular
     .module('app.movies')
-    .component('movieRating', {
+    .component('MovieRatingComponent', {
       templateUrl: 'app/movies/movie-rating.component.html',
       bindings: {
-        value: "<"
+        value: '<'
       },
       transclude: true,
       controllerAs: 'vm',
-      controller: ['$q', 'dataservice', 'logger' , movieRating]
+      controller: [MovieRatingComponent]
     });
 
-  function movieRating() {
+  function MovieRatingComponent() {
     var vm = this;
 
     vm.$onInit = function() {
@@ -22,7 +22,7 @@
 
     vm.$onChanges = function() {
       vm.entries = new Array(vm.value);
-    }
+    };
 
   }
 
